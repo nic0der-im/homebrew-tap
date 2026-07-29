@@ -5,13 +5,13 @@
 class Ros < Formula
   desc "CLI tool for managing MikroTik RouterOS routers with structured JSON output"
   homepage "https://github.com/nic0der-im/routeros-cli"
-  version "0.3.0"
+  version "0.3.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nic0der-im/routeros-cli/releases/download/v0.3.0/ros_0.3.0_darwin_amd64.tar.gz"
-      sha256 "96b81a1c1357bd69d24125b2178de35bce179d225fad61b75d28eacfe95e18c1"
+      url "https://github.com/nic0der-im/routeros-cli/releases/download/v0.3.1/ros_0.3.1_darwin_amd64.tar.gz"
+      sha256 "8f59dee94dd09bcf8e3545d86e4fa8284a4f98513f3536d7db2b3668abc0ae7c"
 
       define_method(:install) do
         bin.install "ros"
@@ -20,8 +20,8 @@ class Ros < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nic0der-im/routeros-cli/releases/download/v0.3.0/ros_0.3.0_darwin_arm64.tar.gz"
-      sha256 "a926d1fa2ec18b5dfb447fb448d24fed097472028ed4211ccb20fec1351e6d83"
+      url "https://github.com/nic0der-im/routeros-cli/releases/download/v0.3.1/ros_0.3.1_darwin_arm64.tar.gz"
+      sha256 "32d5602503339fb1ce8e659493b0447e10c895f534fea236cae855915527707d"
 
       define_method(:install) do
         bin.install "ros"
@@ -33,8 +33,8 @@ class Ros < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nic0der-im/routeros-cli/releases/download/v0.3.0/ros_0.3.0_linux_amd64.tar.gz"
-      sha256 "9bc7be59b01196c5ee377ed6ef144c6465efe4cead708f48c7e3f6ca2c9a571a"
+      url "https://github.com/nic0der-im/routeros-cli/releases/download/v0.3.1/ros_0.3.1_linux_amd64.tar.gz"
+      sha256 "6030dc7621d9f615dd8f635e4a51804a1c3e8842582af58e95f0ea9bdd8ce7c4"
       define_method(:install) do
         bin.install "ros"
         bin.install_symlink "ros" => "routeros-cli"
@@ -42,8 +42,8 @@ class Ros < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nic0der-im/routeros-cli/releases/download/v0.3.0/ros_0.3.0_linux_arm64.tar.gz"
-      sha256 "d262b6ad1a6e8313502f4118036b46e0b15c98d67f83ed2ffe0b8a2c45347924"
+      url "https://github.com/nic0der-im/routeros-cli/releases/download/v0.3.1/ros_0.3.1_linux_arm64.tar.gz"
+      sha256 "cca0283de2fd078d95529109ac66bcc30c1f08c244419b6bb1e882bfb55b80a4"
       define_method(:install) do
         bin.install "ros"
         bin.install_symlink "ros" => "routeros-cli"
